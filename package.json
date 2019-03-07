@@ -1,0 +1,42 @@
+{
+  "name": "kickstarter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "dev": "node server.js"
+  },
+  "author": "K$R",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "child_process": "^1.0.2",
+    "circular-json": "^0.5.9",
+    "express": "^4.16.4",
+    "filereader": "^0.10.3",
+    "fs": "0.0.1-security",
+    "fs-extra": "^7.0.1",
+    "ganache-cli": "^6.0.3",
+    "ipfs-http-client": "^29.1.1",
+    "ipfs-mini": "^1.1.5",
+    "mocha": "^4.1.0",
+    "mongoose": "^4.13.18",
+    "multer": "^1.4.1",
+    "next": "^4.1.0",
+    "next-routes": "^1.4.2",
+    "node-qpdf": "^1.0.3",
+    "nodemon": "^1.18.10",
+    "openpgp": "^4.4.10",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-flex": "^2.2.8",
+    "rimraf": "^2.6.3",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.83.0",
+    "solc": "^0.4.25",
+    "truffle-hdwallet-provider": "0.0.6",
+    "web3": "^1.0.0-beta.29"
+  }
+}
