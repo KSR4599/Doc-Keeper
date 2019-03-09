@@ -8,7 +8,7 @@ var estoreFactory = require('./build/DocStore.json');
 
 const instance = new web3.eth.Contract(
   JSON.parse(estoreFactory.interface),
-  '0xF1A79A032d08a82136e131f1CF178ADe8b052a02'
+  '0x0cb4a16375083614D5395fbc4bec102828D619a7'
 );
 
 //export default instance;

@@ -5,31 +5,20 @@ import { Link } from '../routes';
 export default () => {
   return (
     <Menu style = {{ marginTop: '10px'}}>
-
+         
   <Link route= "/">
-   <a className = "item">UPX Document Keeper</a>
-   </Link>
-   <Link route= "/mydocs">
-   <a className = "item">My Documents</a>
-   </Link>
-   <Link route= "/verifydoc">
-   <a className = "item">Verify Documents</a>
+
+  <a className = "item">
+  <img src='https://upxacademy.com/wp-content/uploads/black-216x-150-1.png' />
+  </a>
    </Link>
 
+  
 
 
      <Menu.Menu position = "right">
 
-     <Link route= "/adddoc">
-      <a className = "item">Upload a Document</a>
-      </Link>
-
-      <Link route= "/adddoc">
-      <Button
-        icon = "plus square outline"
-        secondary = { true }
-       />
-       </Link>
+     
 
      </Menu.Menu>
 

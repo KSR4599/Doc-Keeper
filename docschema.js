@@ -11,7 +11,7 @@ var DocSchema = new Schema ({
     docname : String,
     ipfsImageHash : String,
     uploadTime : Number,
-    status: Boolean
+    status: String
 
 })
 

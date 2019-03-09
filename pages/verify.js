@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Layout from '../components/Layout'
 import { Grid, Button, Icon} from 'semantic-ui-react';
-
+import estore from '../ethereum/store';
+import web3 from '../ethereum/web3';
 
 class Test extends Component {
 
@@ -11,6 +12,39 @@ class Test extends Component {
 
     return { ipfs , ids}
 
+  }
+
+   constructor(props) {
+    super(props);
+  console.log("In Contructor");
+
+
+    this.state = { 
+        id : '',
+        message: 'If Everything is Correct. Click the confirm button!'
+      }
+
+     
+    this.onClick = this.onClick.bind(this);
+    this.onChange = this.onChange.bind(this);
+  
+  }
+
+  onChange = async(event) => {
+    this.setState({id:event.target.value});
+   
+  }
+
+  onClick = async (event) => {
+    event.preventDefault();
+const accounts = await web3.eth.getAccounts();
+const account = accounts[0];
+var docx = await estore.methods.verifyDoc(
+  this.state.id
+).send({
+ from : account
+})
+console.log("Document verified Succesfully! :", docx)
   }
 
       render () 
@@ -35,8 +69,8 @@ class Test extends Component {
              </Grid>
             
 <br/><br/><br/><br/><br/><br/>
-             <form method="post" action='/verifyit'>
-             <input type ="text" name="id" placeholder="Enter the id of document"/>
+             <form onSubmit={this.onClick}>
+             <input type ="text"  onChange = {this.onChange} placeholder="Enter the id of document"/>
     <Button animated type="submit">
       <Button.Content visible>Verify</Button.Content>
       <Button.Content hidden>

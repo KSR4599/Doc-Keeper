@@ -6,7 +6,7 @@ const compiledStore = require('./build/DocStore.json');
 //2. Rinkeby network key provided by the infutura.
 const provider = new HDWalletProvider(
   'market drift trick scare squeeze now car addict small flush grocery more',
-  'https://rinkeby.infura.io/v3/aa02f41993434b5b81b22700202af5ad'
+  'https://rinkeby.infura.io/v3/c13abeb8cec7413eac5c187cbd333443'
 );
 
 const web3 = new Web3(provider);
@@ -16,7 +16,7 @@ const deploy = async () => {
   console.log('Attempting to deploy from the account', accounts[0]); //Our first rinkeby account
 const result =  await new web3.eth.Contract(JSON.parse(compiledStore.interface))
     .deploy({ data:'0x'+ compiledStore.bytecode})    //deploy and send very much similar to that of the ganache case.
-    .send({ from : accounts[0], gas: '1000000'})
+    .send({ from : accounts[0], gas: '2000000'})
 
 
     console.log('Contract Deployed to', result.options.address);    //console logging the address where our contract has been deployed.

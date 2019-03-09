@@ -12,6 +12,7 @@ class Test extends Component {
       
         const accounts = await web3.eth.getAccounts();
         const account = accounts[0];
+        console.log("Your Account is :", account);
         return { name , index , imagehash, account}
       }
       
@@ -24,10 +25,10 @@ constructor(props) {
         index : this.props.index,
         imagehash :this.props.imagehash,
         imageLink : 'https://ipfs.io/ipfs/'+this.props.imagehash,
-        message: 'If Everything is Correct. Click the conform button!'
+        message: 'If Everything is Correct. Click the confirm button!'
       }
 
-      console.log("name", this.state.name);
+     
     this.onClick = this.onClick.bind(this);
   
   }
