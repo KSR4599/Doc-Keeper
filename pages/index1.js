@@ -62,29 +62,48 @@ constructor(props) {
 
 <br/> <br/> <br/>
 <Segment placeholder>
-    <Grid columns={2} relaxed='very' stackable>
+<Grid columns={3} divided>
+<Grid.Row>
       <Grid.Column>
        <img src='https://cdn.dribbble.com/users/789033/screenshots/2346688/finalloader1-2.gif' />
        <form action="/adddoc" method="get">
-     <Button type="submit" content='Add Document' icon='signup' size='big' /> 
+       <br></br>  <br></br> 
+     <Button type="submit" content='Add Document' icon='plus circle' size='big' /> 
   
        </form>
       </Grid.Column>
 
-      <Grid.Column verticalAlign='middle'>
+ 
       <Grid.Column>
        <img src='https://i.gifer.com/QZJI.gif' />
        <form action="/mydocs" method="post">
        <input type="hidden" name ="account" value={this.state.account} />
        <input type="hidden" name ="sample" value="10"/>
-        <Button content='Show Document' icon='signup' size='big' />
+       <br></br>  <br></br> 
+        <Button content='My Documents' icon='address card outline' size='big' />
         </form>
       </Grid.Column>
 
+ 
+
+
+      
+
+      <Grid.Column>
+       <img src='https://cdn.dribbble.com/users/391380/screenshots/5431062/icon.gif' />
+       <form action="/mydocs" method="post">
+       <input type="hidden" name ="account" value={this.state.account} />
+       <input type="hidden" name ="sample" value="10"/>
+       <br></br>
+       <input type="text" name="address" placeholder="Enter the address"/>
+       <br></br>  <br></br> 
+        <Button content='Check the status' icon='tasks' size='big' />
+        </form>
       </Grid.Column>
+
+</Grid.Row>
     </Grid>
 
-    <Divider vertical>Or</Divider>
   </Segment>
 
 

@@ -64,9 +64,11 @@ constructor(props) {
       {
         return (
     <Layout>
+    <div align="center">
     <h1>Document Name : {this.props.name}</h1>
-    <h1>Your Document :<a href= {this.state.imageLink} target="_blank">Click here</a></h1>
-    <h1>Your Account Address : {this.props.account}</h1>
+    <h1>Your Document :<a href= {this.state.imageLink} target="_blank"><Image src='https://thumbs.gfycat.com/ColorlessGrouchyBear-size_restricted.gif'  size='small' rounded/>
+</a></h1>
+  
 
     <form onSubmit={this.onClick}>
     <Button animated type="submit">
@@ -78,6 +80,7 @@ constructor(props) {
 
 </form>
     <Segment color='teal'>  <h2>{this.state.message}</h2></Segment>
+    </div>
     </Layout>
     
 

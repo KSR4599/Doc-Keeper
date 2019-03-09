@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Layout from '../components/Layout'
-import { Grid, Button, Icon} from 'semantic-ui-react';
+import { Grid, Button, Icon, Image, Segment, Divider} from 'semantic-ui-react';
 import estore from '../ethereum/store';
 import web3 from '../ethereum/web3';
 
@@ -51,8 +51,21 @@ console.log("Document verified Succesfully! :", docx)
 {
     return(
     <Layout>                                                
+
+   <div align="center">
+
+
+    <Segment.Inline>
+    <h1>Document Verification Page :</h1>   
     
-    <Grid>
+    <Image src='https://cdn.dribbble.com/users/760295/screenshots/3866906/scaning.gif' size='medium' circular />
+    </Segment.Inline>
+
+
+
+    <Segment placeholder>
+    <Segment.Inline>
+  <Grid>
     <ol>
 
            <h2>Documents : </h2>    <h3>
@@ -66,11 +79,14 @@ console.log("Document verified Succesfully! :", docx)
                     return <li key={ index }>{name}</li>;
                   })}</h3>
               </ul>   
-             </Grid>
             
-<br/><br/><br/><br/><br/><br/>
+              </Grid>
+
+              <br></br>    <br></br>   <br></br>    <br></br>  
+
              <form onSubmit={this.onClick}>
              <input type ="text"  onChange = {this.onChange} placeholder="Enter the id of document"/>
+             <br></br> <br></br> 
     <Button animated type="submit">
       <Button.Content visible>Verify</Button.Content>
       <Button.Content hidden>
@@ -79,6 +95,9 @@ console.log("Document verified Succesfully! :", docx)
     </Button>
 
 </form>
+    </Segment.Inline>
+    </Segment>
+    </div>
     </Layout>
     
     

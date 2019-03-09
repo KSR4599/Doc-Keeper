@@ -59,7 +59,6 @@ constructor(props) {
 <Layout>
 <Segment placeholder>
 <div align="center">
-<h1>Your Account:{this.state.account} </h1>
 
 <br/> <br/> <br/>
 <Grid columns={3} divided>

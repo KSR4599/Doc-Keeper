@@ -52,22 +52,22 @@ constructor(props) {
 <Segment placeholder>
     <Grid columns={2} relaxed='very' stackable>
       <Grid.Column>
-       <img src='http://menloworks.com/wp-content/uploads/mobile-user-segments.png' />
-<br/><br/><br/><br/><br/><br/>
+      <Image src='https://cdn.dribbble.com/users/892646/screenshots/2386410/open-uri20151203-3-1m57864'  size='large' rounded/>
+<br></br>
        <Link route= "/index1">
-   <a className = "item"> <Button type="submit" content='User' icon='signup' size='big' /></a>
+   <a className = "item"> <Button type="submit" content='User Login' icon='user' size='big' /></a>
    </Link>
   
       </Grid.Column>
 
       <Grid.Column verticalAlign='middle'>
       <Grid.Column>
-       <img src='https://www.speexx.com/wp-content/uploads/icon-think-user-centric-1.png' />
 
-   
+       <Image src='https://cdn.dribbble.com/users/1925079/screenshots/5510101/manage-2.gif'  size='large' rounded />
+       <br></br>
       </Grid.Column>
       <Link route= "/verifydocs">
-   <a className = "item"> <Button type="submit" content='Admin' icon='signup' size='big' /></a>
+   <a className = "item"> <Button type="submit" content='Admin Login' icon='user secret' size='big' /></a>
    </Link>
       </Grid.Column>
     </Grid>
