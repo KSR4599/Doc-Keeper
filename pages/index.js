@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import web3 from '../ethereum/web3';
 import estore from '../ethereum/store';
-import { Card, Button , Form, Divider, Grid, Image, Placeholder, Segment,Container} from 'semantic-ui-react';
+import { Card, Icon, Header, Modal, Button ,Input, Form, Divider, Grid, Image, Placeholder, Segment,Container} from 'semantic-ui-react';
 import Layout from '../components/Layout'
 import ipfs from '../ipfs';
 import axios, { post } from 'axios';
@@ -34,17 +34,55 @@ constructor(props) {
     buffer : null,
     ipfsHash : '',
     message :'',
-    account : account
+    account : account,
+    modalOpen : false,
+    password :''
   }
 
 
 }
 
+onChange = async(event) => {
+  this.setState({password:event.target.value});
+ 
+}
+handleOpen = () => this.setState({ modalOpen: true })
 
+  handleClose = () => this.setState({ modalOpen: false })
+
+  onClick = async (event) => {
+    event.preventDefault();
+    var password = this.state.password;
+    if(password =="admin"){
+      Router.pushRoute('/verifydocs');
+    }
+  }
   render () 
   {
     return (
 <Layout>
+
+<Modal
+  
+        open={this.state.modalOpen}
+        onClose={this.handleClose}
+        basic
+        size='small'
+      >
+
+<Header icon='hand paper' content='Restricted Entry!' />
+        <Modal.Content>
+          <h3>This is a restricted entry. Please provide secret key to login.</h3>
+        </Modal.Content>
+        <Modal.Actions>
+        <Input type="password" onChange = {this.onChange} placeholder="Enter secret key"/>
+          <Button color='green' onClick={this.onClick} inverted>
+            <Icon name='checkmark' /> Enter
+          </Button>
+        </Modal.Actions>
+      </Modal>
+
+
 <div align="center">
 
 
@@ -66,9 +104,8 @@ constructor(props) {
        <Image src='https://cdn.dribbble.com/users/1925079/screenshots/5510101/manage-2.gif'  size='large' rounded />
        <br></br>
       </Grid.Column>
-      <Link route= "/verifydocs">
-   <a className = "item"> <Button type="submit" content='Admin Login' icon='user secret' size='big' /></a>
-   </Link>
+   
+ <Button type="submit" onClick ={this.handleOpen} content='Admin Login' icon='user secret' size='big' />
       </Grid.Column>
     </Grid>
 

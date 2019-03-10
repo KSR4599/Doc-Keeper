@@ -69,7 +69,7 @@ constructor(props) {
 
     <br></br>    <br></br>       <br></br> <br></br> <br></br> <br></br> 
 <form method="post" action="/upload" id="submit-form" encType="multipart/form-data">
-<input type="hidden" name="name" value="aadhar" />
+<input type="hidden" name="name" value="AADHAR CARD" />
 <input type="hidden" name="index" value="1" />
 <input type="hidden" name="owner" value={this.props.account} />
 <input type="file" name="doc"/>
@@ -90,7 +90,7 @@ constructor(props) {
 
     <br></br>    <br></br>    <br></br>    <br></br>   
 <form method="post" action="/upload" id="submit-form" encType="multipart/form-data">
-<input type="hidden" name="name" value="pan card" />
+<input type="hidden" name="name" value="PAN CARD" />
 <input type="hidden" name="index" value="2" />
 <input type="hidden" name="owner" value={this.props.account} />
 <input type="file" name="doc"/>
@@ -112,7 +112,7 @@ constructor(props) {
 
     <br></br>    <br></br>       
 <form method="post" action="/upload" id="submit-form" encType="multipart/form-data">
-<input type="hidden" name="name" value="passport" />
+<input type="hidden" name="name" value="PASSPORT" />
 <input type="hidden" name="index" value="3" />
 <input type="hidden" name="owner" value={this.props.account} />
 <input type="file" name="doc"/>

@@ -71,8 +71,7 @@ app
 
    function verEvent(){
     instance.events.verDoc({
-      fromBlock: 0,
-      toBlock: 'latest'
+     
 
   }, function(error, event){ console.log(event); })
   .on('data', function(event){
@@ -114,8 +113,7 @@ app
 
   function docEvent(){
     instance.events.newDoc({
-      fromBlock: 0,
-      toBlock: 'latest'
+     
 
   }, function(error, event){ console.log(event); })
   .on('data', function(event){
@@ -325,7 +323,7 @@ DocModel.find({ 'status': false}, function (err, docs) {
         status.push(docs[i].status)
       }
       
-      return app.render(req, res, '/mydocs', { ipfs:ipfs ,names:names,status:status } )
+      return app.render(req, res, '/mydocs', { ipfs:ipfs ,names:names,status:status } );
      })
   })
 

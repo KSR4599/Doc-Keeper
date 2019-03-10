@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Layout from '../components/Layout'
-import { Card, Button, Icon, Image, Segment } from 'semantic-ui-react';
+import { Card, Button, Icon, Image, Segment, Step } from 'semantic-ui-react';
 import web3 from '../ethereum/web3';
 import { Link, Router } from '../routes';
 import estore from '../ethereum/store';
@@ -36,7 +36,7 @@ constructor(props) {
       
   onClick = async (event) => {
     event.preventDefault();
-    this.setState({message : 'We adding your document. Please wait.' });
+    this.setState({message : 'We are adding your document. Please wait.' });
       console.log("On Click Called!");
       console.log("name",this.state.name);
       console.log("imagehash", this.state.imagehash);
@@ -56,7 +56,7 @@ constructor(props) {
       console.log("Doc is", f);
     })
     this.setState({message : 'Done!' });
-    //Router.pushRoute('/');
+    Router.pushRoute('/index1');
   }
     
 
@@ -65,7 +65,15 @@ constructor(props) {
         return (
     <Layout>
     <div align="center">
-    <h1>Document Name : {this.props.name}</h1>
+    <h1>Document Name :</h1>  <Step.Group>
+    <Step>
+      <Icon name='file alternate' />
+      <Step.Content>
+        <Step.Title>{this.props.name}</Step.Title>
+        <Step.Description>Will be approved by the respective authority soon</Step.Description>
+      </Step.Content>
+    </Step>
+  </Step.Group>
     <h1>Your Document :<a href= {this.state.imageLink} target="_blank"><Image src='https://thumbs.gfycat.com/ColorlessGrouchyBear-size_restricted.gif'  size='small' rounded/>
 </a></h1>
   
@@ -74,7 +82,7 @@ constructor(props) {
     <Button animated type="submit">
       <Button.Content visible>Confirm</Button.Content>
       <Button.Content hidden>
-        <Icon name='angle double right' />
+        <Icon name='check square outline' />
       </Button.Content>
     </Button>
 

@@ -90,7 +90,7 @@ console.log("Document verified Succesfully! :", docx)
     <Button animated type="submit">
       <Button.Content visible>Verify</Button.Content>
       <Button.Content hidden>
-        <Icon name='angle double right' />
+        <Icon name='check' />
       </Button.Content>
     </Button>
 

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import web3 from '../ethereum/web3';
 import estore from '../ethereum/store';
-import { Card, Button , Form, Divider, Grid, Image, Placeholder, Segment} from 'semantic-ui-react';
+import { Card, Button , Form, Divider, Grid, Image, Placeholder, Segment, Input, Icon} from 'semantic-ui-react';
 import Layout from '../components/Layout'
 import ipfs from '../ipfs';
 import axios, { post } from 'axios';
@@ -92,10 +92,9 @@ constructor(props) {
       <Grid.Column>
        <img src='https://cdn.dribbble.com/users/391380/screenshots/5431062/icon.gif' />
        <form action="/mydocs" method="post">
-       <input type="hidden" name ="account" value={this.state.account} />
        <input type="hidden" name ="sample" value="10"/>
        <br></br>
-       <input type="text" name="address" placeholder="Enter the address"/>
+       <Input icon={<Icon name='address card' inverted circular link />} name="account" placeholder='Enter the address' />
        <br></br>  <br></br> 
         <Button content='Check the status' icon='tasks' size='big' />
         </form>

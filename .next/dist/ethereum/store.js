@@ -6,7 +6,7 @@
 var web3 = require('./web3');
 var estoreFactory = require('./build/DocStore.json');
 
-var instance = new web3.eth.Contract(JSON.parse(estoreFactory.interface), '0x0cb4a16375083614D5395fbc4bec102828D619a7');
+var instance = new web3.eth.Contract(JSON.parse(estoreFactory.interface), '0xF5dA09f6F28C8cC303426fe3b5B3479A980D61e9');
 
 //export default instance;
 module.exports = instance;
