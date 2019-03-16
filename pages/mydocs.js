@@ -36,15 +36,13 @@ class Test extends Component {
         return (
           <Layout>                                                
     <div align="center">
-    <br></br> <br></br>  <br></br> <br></br>  <br></br> 
+    <br></br> <br></br>  <br></br> 
           <Grid>
-         
-      <List> 
+         <List> 
                  <h2>Names : </h2>    <h2>
                  {this.props.names.map(function(name, index){
                   return  <List.Item key={ index }> <br></br><br></br> {name} </List.Item>;
-                            })} </h2>
-                           
+                            })} </h2>                        
      </List>
   
       <List>
