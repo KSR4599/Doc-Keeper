@@ -5,7 +5,7 @@ const compiledfactory = require('./build/CampaignFactory.json');
 //1. Our secret phrase got via metamask
 //2. Rinkeby network key provided by the infutura.
 const provider = new HDWalletProvider(
-  'market drift trick scare squeeze now car addict small flush grocery more',
+  'seed words',
   'wss://rinkeby.infura.io/ws/43f6b5d4ffff49af942076237407b38e'
 );
 
